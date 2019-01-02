@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfApp1.View.DataTableView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.View"
+        mc:Ignorable="d"
+        Title="{Binding Title, Mode=TwoWay}" Height="450" Width="800">
+    <StackPanel>
+        <DataGrid Height="250" ItemsSource="{Binding ListSuma, Mode=TwoWay}" AutoGenerateColumns="False" CanUserResizeColumns="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id, Mode=TwoWay}"/>
+                <DataGridTextColumn Header="Parametro 1" Binding="{Binding Parameter1, Mode=TwoWay}"/>
+                <DataGridTextColumn Header="Parametro 2" Binding="{Binding Parameter2, Mode=TwoWay}"/>
+                <DataGridTextColumn Header="Suma" Binding="{Binding Suma, Mode=OneWay}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
+</Window>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApp1.View.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.View"
+        mc:Ignorable="d"
+        Title="{Binding Title, Mode = TwoWay}" Height="226" Width="391" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Content="Iniciar Sesión" FontSize="16" FontWeight="Bold" />
+        <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Content="Para empezar a gestionar, porfavor ingrese sus credenciales." FontSize="11" />
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Usuario :"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="0,5,-2,5"/>
+
+        <Label Grid.Row="3" Grid.Column="0" Content="Password :"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Margin="0,5"/>
+
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" MaxWidth="200" Margin="5" Content="Login" Command="{Binding LoginCommand}"/>
+    </Grid>
+</Window>
